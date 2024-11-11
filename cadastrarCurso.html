@@ -12,17 +12,37 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav_header">
+            <h1><a href="index.html" class="nav_title">Uni<b>Academy</b></a></h1>
+        </nav>
+        <nav class="nav_subheader">
+            <ul class="nav_subheader_a">
+                <li><a href="cadastrarCurso.html">Cadastrar Curso</a></li>
+                <li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        
-    </main>
+        <section>
+            <h2>Cadastrar Curso</h2>
 
-    <footer>
-        <nav>
-        </nav>
-    </footer>
+            <form action="PHP/cadastrarCurso.php" method="post">
+                <div class="line_one">
+                    <input type="text" id="courseName" name="courseName" placeholder="Nome do Curso" required>
+                    <input type="number" id="price" name="price" placeholder="Preço" required step="0.01" min="0">
+                </div>
+                
+                <div class="line_two">
+                    <input type="number" id="courseHours" name="courseHours" placeholder="Horas de Curso" required>
+                    <input type="text" id="nivel" name="nivel" placeholder="Nível do Curso" required>
+                </div>
+
+                <textarea type="text" id="description" name="description" placeholder="Descrição" required style="height: 120px;"></textarea>
+
+                <input type="submit" value="CADASTRAR CURSO">
+            </form>
+        </section>
+    </main>
 </body>
 </html>
