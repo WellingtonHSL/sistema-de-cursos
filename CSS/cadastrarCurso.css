@@ -12,7 +12,7 @@ header {
 
 .nav_header {
     height: 90px;
-    background-color: #47463D;
+    background-color: #47463D; /*250f3a*/
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@ header {
 .nav_subheader_a {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 60px;
 }
 
 .nav_subheader_a li a {
