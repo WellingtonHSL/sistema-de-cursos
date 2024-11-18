@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*HEADER*/
+header {
+    width: 100%;
+}
+
+.nav_header {
+    height: 90px;
+    background-color: #47463D; /*250f3a*/
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_header h1 {
+    font-size: 32px;
+    margin-left: 8%;
+}
+
+.nav_title {
+    font-weight: bolder;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav_title b {
+    color: #EC7702;
+    font-weight: bolder;
+}
+
+.nav_subheader {
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_subheader_a {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.nav_subheader_a li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav_subheader_a li a:hover {
+    text-decoration: underline;
+}
+
+/*BODY*/
+body{
+    background-color: #1f1e1a;
+}
+main {
+    padding: 80px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-size: 36px;
+    color: #EC7702;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.line_one_stud {
+    display: flex;
+    gap: 20px; 
+}
+
+#fullName {
+    flex: 3;
+}
+
+.line_two_stud{
+    display: flex;
+    gap: 20px; 
+}
+
+#cpf{
+    flex: 1;
+}
+
+#rg{
+    flex: 1;
+}
+
+.line_one_addr{
+    display: flex;
+    gap: 20px;
+}
+
+#city,#state{
+    flex: 1;
+}
+
+.line_two_addr{
+    display: flex;
+    gap: 20px;
+}
+
+#road{
+    flex: 3;
+}
+
+#number{
+    flex:1;
+}
+
+input[type="text"],
+input[type="number"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0px 0px 6px rgba(236, 119, 2, 0.7);
+    font-size: 24px;
+}
+
+input[type="submit"] {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 380px;
+    background-color: #FFFFFF;
+    color: #EC7702;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px rgba(236, 119, 2, 0.7);
+    align-self: flex-end;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0px 0px 6px rgba(236, 119, 2, 0.7);
+    color: #FFFFFF;
+    background: #EC7702;
+}
