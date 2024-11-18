@@ -6,7 +6,7 @@
     <meta name="author" content="Glauber Shoity Nakai">
     <meta name="author" content="Kamilla Barros Silva">
     <meta name="author" content="Wellington Henrique da Silva Lima">
-    <link rel="stylesheet" type="text/css" href="CSS/index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/matricularAluno.css" media="screen" />
 
     <title>UniAcademy</title>
 </head>
@@ -26,10 +26,16 @@
 
     <main>
         <section>
-            <h1>Bem-vindo à <b class="uni">Uni</b><b class="academy">Academy</b>!</h1>
-            <p>Sua jornada de aprendizado começa aqui. Na UniAcademy, oferecemos cursos inovadores e flexíveis, criados para atender às suas necessidades, seja para desenvolver novas habilidades ou se aprofundar em áreas específicas.</p>
-        </section>
+            <h2>Matricular Aluno</h2>
 
+            <form action="PHP/matricularAluno.php" method="post">
+                <input type="text" id="fullName" name="fullName" placeholder="Nome do Aluno" required>
+
+                <input type="text" id="courseName" name="courseName" placeholder="Nome do Curso" required>            
+
+                <input type="submit" value="MATRICULAR ALUNO">
+            </form>
+        </section>
     </main>
 </body>
 </html>
