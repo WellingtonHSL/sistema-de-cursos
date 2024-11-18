@@ -12,23 +12,51 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav_header">
+            <h1><a href="index.html" class="nav_title">Uni<b>Academy</b></a></h1>
+        </nav>
+        <nav class="nav_subheader">
+            <ul class="nav_subheader_a">
+                <li><a href="cadastrarCurso.html">Cadastrar Curso</a></li>
+                <li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
+                <li><a href="matricularAluno.html">Matricular Aluno</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Cadastro de Aluno</h2>
-        <input type="text" id="completeName" name="completeName" placeholder="Nome Completo" required> <br> <br>
-        <input type="number" id="cpf" name="cpf" placeholder="CPF" required> <br> <br>
-        <input type="number" id="rg" name="rg" placeholder="RG" required> <br> <br>
-        <input type="text" id="fatherName" name="fatherName" placeholder="Nome do Pai" required> <br> <br>
-        <input type="text" id="motherName" name="motherName" placeholder="Nome do Mãe" required> <br> <br>
-      
-        <input type="text" id="city" name="city" placeholder="Cidade" required> <br> <br>
-        <input type="text" id="state" name="state" placeholder="Estado" required> <br> <br>
-        <input type="text" id="road" name="road" placeholder="Rua" required> <br> <br>
-        <input type="number" id="number" name="number" placeholder="Número" required> <br> <br>
-        <input type="text" id="complement" name="complement" placeholder="Complemento" required> <br> <br>
+        <form action="PHP/cadastrarAluno" method="post">
+            <h2>Cadastro de Aluno</h2>
+            <div class="line_one_stud"> 
+                <input type="text" id="fullName" name="fullName" placeholder="Nome Completo" required>
+            </div>
+
+            <div class="line_two_stud">
+                <input type="number" id="cpf" name="cpf" placeholder="CPF" required> 
+                <input type="number" id="rg" name="rg" placeholder="RG" required> 
+            </div>
+
+            <div class="line_three_stud">   
+                <input type="text" id="fatherName" name="fatherName" placeholder="Nome do Pai" required> 
+                <input type="text" id="motherName" name="motherName" placeholder="Nome do Mãe" required> 
+            </div>
+            
+            <h2>Endereço</h2>
+            <div class="line_one_addr">
+                <input type="text" id="city" name="city" placeholder="Cidade" required> 
+                <input type="text" id="state" name="state" placeholder="Estado" required>
+            </div>
+
+            <div class="line_two_addr">
+                <input type="text" id="road" name="road" placeholder="Rua" required>
+                <input type="number" id="number" name="number" placeholder="Número" required>
+            </div>
+
+            <textarea type="text" id="complement" name="complement"  placeholder="Complemento" rows="2" required></textarea>
+
+            <input type="submit" value="CADASTRAR ALUNO">
+        </form>    
+          
     </main>
 
     <footer>
