@@ -110,7 +110,11 @@ form {
     gap: 20px;
 }
 
-#city,#state{
+#city{
+    flex: 2;
+}
+
+#state{
     flex: 1;
 }
 
