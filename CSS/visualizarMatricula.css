@@ -101,10 +101,21 @@ section fieldset {
     box-shadow: 0px 0px 6px rgba(133, 130, 128, 0.7);
 }
 
-section h3 {
+h3 {
     color: #EC7702;
     font-size: 30px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+h4 {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+p {
+    font-size: 16px;
+    padding-top: 10px; 
+    padding-left: 20px;
 }

@@ -41,10 +41,9 @@
                     $courses = $courseCollection->find();
 
                     foreach ($courses as $course) {
-                        $courseName = $course['nome'];
                         echo "<fieldset>";
-                        echo "<h3>$courseName</h3>";
-                        echo "<p> Alunos Matriculados:</p>";
+                        echo "<h3>" . htmlspecialchars($course['nome']) . "</h3>";
+                        echo "<h4> Alunos Matriculados:</h4>";
 
                         $registrations = $enrollmentCollection->find(['cursoId' => $course['_id']]);
                         $registrationsArray = iterator_to_array($registrations);
@@ -53,6 +52,7 @@
 
                         if ($registrationsCount == 0) {
                             echo "<p>Nenhum aluno matriculado.</p>";
+                            echo "</fieldset>";
                         } else {
                             echo "<ul>";
 
@@ -61,7 +61,7 @@
                                 $student = $studentCollection->findOne(['_id' => $studentId]);
 
                                 if ($student) {
-                                    echo "<li>" . $student['nomeCompleto'] . "</li>";
+                                    echo "<p>" . $student['nomeCompleto'] . "</p>";
                                 }
                             }
                             echo "</ul>";
