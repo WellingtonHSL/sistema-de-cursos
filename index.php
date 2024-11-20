@@ -20,6 +20,7 @@
                 <li><a href="cadastrarCurso.html">Cadastrar Curso</a></li>
                 <li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
                 <li><a href="matricularAluno.html">Matricular Aluno</a></li>
+                <li><a href="visualizarMatriculas.php">Visualizar Matriculas</a></li>
             </ul>
         </nav>
     </header>
@@ -36,15 +37,12 @@
             <h2>Cursos Disponíveis</h2>
             <div class="courses">
                 <?php
-                // Conecte ao MongoDB
                 require 'PHP/dbConnection.php';
                 $dbConnection = MongoDBConnection::getInstance();
                 $collection = $dbConnection->getCollection("course");
 
-                // Busque todos os cursos
                 $courses = $collection->find();
 
-                // Exiba os cursos
                 foreach ($courses as $course) {
                     echo "<fieldset>";
                     echo "<h3>" . htmlspecialchars($course['nome']) . "</h3>";
