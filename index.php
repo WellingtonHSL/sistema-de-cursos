@@ -37,21 +37,22 @@
             <h2>Cursos Disponíveis</h2>
             <div class="courses">
                 <?php
-                require 'PHP/dbConnection.php';
-                $dbConnection = MongoDBConnection::getInstance();
-                $collection = $dbConnection->getCollection("course");
+                    require 'PHP/dbConnection.php';
+                    
+                    $dbConnection = MongoDBConnection::getInstance();
+                    $collection = $dbConnection->getCollection("course");
 
-                $courses = $collection->find();
+                    $courses = $collection->find();
 
-                foreach ($courses as $course) {
-                    echo "<fieldset>";
-                    echo "<h3>" . htmlspecialchars($course['nome']) . "</h3>";
-                    echo "<p><strong>Preço:</strong> R$ " . number_format($course['preco'], 2, ',', '.') . "</p>";
-                    echo "<p><strong>Horas:</strong> " . intval($course['horas']) . " horas</p>";
-                    echo "<p><strong>Nível:</strong> " . htmlspecialchars($course['nivel']) . "</p>";
-                    echo "<p><strong>Descrição:</strong> " . htmlspecialchars($course['descricao']) . "</p>";
-                    echo "</fieldset>";
-                }
+                    foreach ($courses as $course) {
+                        echo "<fieldset>";
+                        echo "<h3>" . htmlspecialchars($course['nome']) . "</h3>";
+                        echo "<p><strong>Preço:</strong> R$ " . number_format($course['preco'], 2, ',', '.') . "</p>";
+                        echo "<p><strong>Horas:</strong> " . intval($course['horas']) . " horas</p>";
+                        echo "<p><strong>Nível:</strong> " . htmlspecialchars($course['nivel']) . "</p>";
+                        echo "<p><strong>Descrição:</strong> " . htmlspecialchars($course['descricao']) . "</p>";
+                        echo "</fieldset>";
+                    }
                 ?>
             </div>
         </article>
